@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Task 1</title>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+        <script>
+            const Makanan = () => {
+                return React.createElement("div", {}, [
+                    React.createElement("h1", {}, "Makanan favoritku!"),
+                    React.createElement("div", {}, "Makanan pembuka"),
+                    React.createElement("ul", {}, [
+                        React.createElement("li", {}, "Semangka"),
+                        React.createElement("li", {}, "Pisang"),
+                        React.createElement("li", {}, "Apel"),
+                    ]),
+                    React.createElement("div", {}, "Makanan utama"),
+                    React.createElement("ul", {}, [
+                        React.createElement("li", {}, "Nasi Uduk"),
+                        React.createElement("li", {}, "Nasi Goreng"),
+                        React.createElement("li", {}, "Nasi Pecel"),
+                    ]),
+                ]);
+            };
+
+            const App = () => {
+                return React.createElement("div", {}, [React.createElement(Makanan)]);
+            };
+
+            const container = document.getElementById("root");
+            const root = ReactDOM.createRoot(container);
+            root.render(React.createElement(App));
+        </script>
+    </body>
+</html>
